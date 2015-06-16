@@ -1,0 +1,22 @@
+<div ng-controller="BooksListCtrl">
+	Data: {{ data }}
+	<md-tabs flex md-border-bottom md-selected="selectedTab" >
+
+		<md-tab label="A">
+			<md-content class="md-padding">
+				<div ng-repeat="team in teams">
+					{{ team.name }}
+					<md-button ng-if="isTeamAdmin(team)"
+						aria-label="New book" class="md-primary" >
+						Do stuff
+					</md-button>
+				</div>
+				Data: {{ data }}
+				<md-button ng-click="data = 'bye'">Bye</md-button>
+			</md-content>
+		</md-tab>
+	
+		<md-tab label="B">
+		</md-tab>
+	</md-tabs>
+</div>
