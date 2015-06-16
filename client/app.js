@@ -16,10 +16,9 @@ else
 angular.module("docflow").controller("BooksListCtrl", 
 	["$scope", "$rootScope", 
 	function($scope, $rootScope){
-		$scope.teams = [{ name: "T1" }];
 		$scope.data = "hello";
 
-		$scope.isTeamAdmin = function(team) {
+		$scope.isTeamAdmin = function() {
 			console.log("isTeamAdmin");
 			return false;
 		};		

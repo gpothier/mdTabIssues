@@ -4,13 +4,13 @@
 
 		<md-tab label="A">
 			<md-content class="md-padding">
-				<div ng-repeat="team in teams">
-					{{ team.name }}
-					<md-button ng-if="isTeamAdmin(team)"
-						aria-label="New book" class="md-primary" >
-						Do stuff
-					</md-button>
-				</div>
+				<!-- Problem 1: The isTeamAdmin method is called 15 times 
+				when the page is loaded, and 60+ more times when 
+				switching tabs -->
+				<div ng-if="isTeamAdmin(null)">stuff</div>
+
+				<!-- Problem 2: Clicking this button causes the data to 
+				change only within the tab, it does not change above -->
 				Data: {{ data }}
 				<md-button ng-click="data = 'bye'">Bye</md-button>
 			</md-content>
