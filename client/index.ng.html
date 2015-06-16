@@ -5,8 +5,8 @@
 		<md-tab label="A">
 			<md-content class="md-padding">
 				<!-- Problem 1: The isTeamAdmin method is called 15 times 
-				when the page is loaded, and 60+ more times when 
-				switching tabs -->
+				when the page is loaded, and 60+ more times in Firefox 
+				(around 15 times in Chrome) when switching tabs -->
 				<div ng-if="isTeamAdmin(null)">stuff</div>
 
 				<!-- Problem 2: Clicking this button causes the data to 
